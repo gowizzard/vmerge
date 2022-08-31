@@ -17,4 +17,4 @@ WORKDIR /app/
 
 COPY --from=build /tmp/src/action .
 
-ENTRYPOINT ["./action"]
+ENTRYPOINT ["/action"]
