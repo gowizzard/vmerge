@@ -6,7 +6,6 @@ FROM golang:alpine AS build
 WORKDIR /tmp/src/
 
 COPY go.mod .
-COPY go.sum .
 RUN go mod download
 
 COPY . .
