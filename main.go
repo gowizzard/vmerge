@@ -8,7 +8,6 @@ import (
 
 var (
 	version = os.Getenv("VERSION")
-	suffix  = os.Getenv("SUFFIX")
 	output  []byte
 )
 
@@ -22,7 +21,7 @@ func main() {
 
 	output = fmt.Append(output, "::set-output")
 	output = fmt.Appendf(output, "%s", " ")
-	output = fmt.Appendf(output, "name=branch::%s%s", suffix, core)
+	output = fmt.Appendf(output, "name=branch::%s", core)
 
 	fmt.Print(string(output))
 
