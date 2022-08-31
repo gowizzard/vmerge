@@ -2,7 +2,7 @@ name: "vmerge"
 description: "Is used to get the version branch name and return it."
 author: "Jonas Kwiedor"
 outputs:
-    branch:
+    branch_name:
         description: "Here you can get the versions branch name."
 runs:
     using: "docker"
