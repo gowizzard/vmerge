@@ -20,9 +20,9 @@ func main() {
 	}
 
 	output = fmt.Append(output, "::set-output")
-	output = fmt.Appendf(output, "%s", " ")
-	output = fmt.Appendf(output, "name=branch::%s", core.Major)
+	output = fmt.Appendf(output, "%-*s", 1, "")
+	output = fmt.Appendf(output, "name=branch_name::%s", core.Major)
 
-	fmt.Printf("%s\n", output)
+	fmt.Printf("%s", output)
 
 }
