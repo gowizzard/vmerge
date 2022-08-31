@@ -1,11 +1,6 @@
 name: "vmerge"
 description: "Is used to get the version branch name and return it."
 author: "Jonas Kwiedor"
-inputs:
-    version:
-        description: "Please transfer the version number."
-        required: true
-        default: "v1.0.0"
 outputs:
     branch:
         description: "Here you can get the versions branch name."
