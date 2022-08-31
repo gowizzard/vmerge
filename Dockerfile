@@ -6,15 +6,14 @@ FROM golang:alpine AS build
 WORKDIR /tmp/src/
 
 COPY go.mod .
-RUN go mod download
 
 COPY . .
-RUN go build -o action
+RUN go build -o vmerge
 
 FROM alpine:latest AS production
 
 WORKDIR /app/
 
-COPY --from=build /tmp/src/action .
+COPY --from=build /tmp/src/vmerge .
 
-ENTRYPOINT ["/action"]
+ENTRYPOINT ["./vmerge"]
