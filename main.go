@@ -21,8 +21,8 @@ func main() {
 
 	output = fmt.Append(output, "::set-output")
 	output = fmt.Appendf(output, "%s", " ")
-	output = fmt.Appendf(output, "name=branch::%s", core)
+	output = fmt.Appendf(output, "name=branch::%s", core.Major)
 
-	fmt.Print(string(output))
+	fmt.Printf("%s\n", output)
 
 }
