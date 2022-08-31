@@ -12,8 +12,8 @@ RUN go build -o vmerge
 
 FROM alpine:latest AS production
 
-WORKDIR /action/
+WORKDIR /action
 
 COPY --from=build /tmp/src/vmerge .
 
-ENTRYPOINT ["./vmerge"]
+ENTRYPOINT ["/action/vmerge"]
