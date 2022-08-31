@@ -9,19 +9,12 @@ COPY go.mod .
 RUN go mod download
 
 COPY . .
-RUN go build -o app
+RUN go build -o action
 
 FROM alpine:latest AS production
 
-RUN apk --no-cache add \
-    tzdata \
-    curl
-
-ENV TZ=Europe/Berlin
-
 WORKDIR /app/
 
-COPY files/ files/
-COPY --from=build /tmp/src/automerge .
+COPY --from=build /tmp/src/action .
 
-ENTRYPOINT ["./app"]
+ENTRYPOINT ["./action"]
