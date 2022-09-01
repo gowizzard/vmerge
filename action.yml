@@ -1,6 +1,9 @@
 name: "vmerge"
 description: "Is used to get the version branch name and return it."
 author: "Jonas Kwiedor"
+branding:
+    icon: "git-merge"
+    color: "gray-dark"
 outputs:
     branch_name:
         description: "Here you can get the versions branch name."
