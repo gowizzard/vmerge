@@ -8,7 +8,7 @@ This is especially important for solutions like Go libraries, where you have to 
 
 For this to work correctly, the corresponding branch must be created. You can do this directly at [GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository). You can decide how this should be called. But you have to consider this when creating the action. [Here](https://github.com/gowizzard/vmerge#using-the-github-action) you can find an example of how you can use the action. In this example, because it is convenient for golang, we use a suffix of `v`, so that when the new tag is checked, the major version number is output with the `v` prepended.
 
-That means we would currently create a v1 branch, which is only maintained as long as there are releases / tags in the major version 1. After that we create a branch for v2, so that this can also be maintained automatically.
+That means we would currently create a `v1` branch, which is only maintained as long as there are releases / tags in the major version 1. After that we create a branch for `v2`, so that this can also be maintained automatically.
 
 ## Using the GitHub Action
 
