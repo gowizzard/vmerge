@@ -6,12 +6,15 @@ import (
 	"os"
 )
 
+// version, suffix, output are to save the environment and output data
 var (
 	version = os.Getenv("VERSION")
 	suffix  = os.Getenv("SUFFIX")
 	output  []byte
 )
 
+// main is there to start the solution
+// And return the output to command line
 func main() {
 
 	core, err := version_core.Split(version)
