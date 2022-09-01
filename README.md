@@ -1,4 +1,4 @@
-# vmerge
+# VMerge
 
 [![GitHub go.mod Go version of a Go module](https://img.shields.io/github/go-mod/go-version/gowizzard/vmerge.svg)](https://golang.org/) [![Go](https://github.com/gowizzard/vmerge/actions/workflows/go.yml/badge.svg)](https://github.com/gowizzard/vmerge/actions/workflows/go.yml) [![CodeQL](https://github.com/gowizzard/vmerge/actions/workflows/codeql.yml/badge.svg)](https://github.com/gowizzard/vmerge/actions/workflows/codeql.yml) [![Go Report Card](https://goreportcard.com/badge/github.com/gowizzard/vmerge)](https://goreportcard.com/report/github.com/gowizzard/vmerge) [![GitHub issues](https://img.shields.io/github/issues/gowizzard/vmerge)](https://github.com/gowizzard/vmerge/issues) [![GitHub forks](https://img.shields.io/github/forks/gowizzard/vmerge)](https://github.com/gowizzard/vmerge/network) [![GitHub stars](https://img.shields.io/github/stars/gowizzard/vmerge)](https://github.com/gowizzard/vmerge/stargazers) [![GitHub license](https://img.shields.io/github/license/gowizzard/vmerge)](https://github.com/gowizzard/vmerge/blob/master/LICENSE)
 
@@ -17,7 +17,7 @@ Here you can find an example for the action, so you can use it in your project. 
 If you use this example, please pay attention to the version number below the dot `Get the major version`.
 
 ```yaml
-name: vmerge
+name: VMerge
 
 on:
   push:
