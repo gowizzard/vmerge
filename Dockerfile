@@ -4,17 +4,20 @@
 # Copy the files from the build image & start the application
 FROM golang:alpine AS build
 
-WORKDIR /tmp/src/
+RUN apk --no-cache add \
+    make
+
+WORKDIR /tmp/src
 
 COPY go.mod .
 
 COPY . .
-RUN go build -o vmerge
+RUN make build
 
 FROM alpine:latest AS production
 
-WORKDIR /action
+WORKDIR /app
 
 COPY --from=build /tmp/src/vmerge .
 
-ENTRYPOINT ["/action/vmerge"]
+ENTRYPOINT ["/app/vmerge"]
