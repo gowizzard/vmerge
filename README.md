@@ -46,7 +46,7 @@ jobs:
 
       - name: Get the major version
         id: vmerge
-        uses: gowizzard/vmerge@v1.0.0
+        uses: gowizzard/vmerge@v1
         env:
             VERSION: ${{ steps.information.outputs.tag }}
             SUFFIX: "v"
