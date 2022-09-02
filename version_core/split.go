@@ -1,6 +1,9 @@
 package version_core
 
-import "regexp"
+import (
+	"github.com/gowizzard/vmerge/convert"
+	"regexp"
+)
 
 // core is to save the major number from the version core
 var core = Core{}
@@ -16,7 +19,7 @@ func Split(version string) (Core, error) {
 	for index, value := range find {
 		switch index {
 		case 0:
-			core.Major = value
+			core.Major = convert.Integer(value)
 		}
 	}
 

@@ -61,7 +61,7 @@ jobs:
             git fetch
             git checkout ${{ steps.vmerge.outputs.branch_name }}
             git pull
-            git merge --no-ff "origin/$DEFAULT_BRANCH" -m "COMMIT_MESSAGE"
+            git merge --no-ff "origin/$DEFAULT_BRANCH" -m "$COMMIT_MESSAGE"
             git push
 ```
 
