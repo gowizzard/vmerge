@@ -18,19 +18,19 @@ func TestSplit(t *testing.T) {
 		{
 			version: "v1.2.4",
 			expected: version_core.Core{
-				Major: "1",
+				Major: 1,
 			},
 		},
 		{
 			version: "v3.7.0-alpha.2+testing-12345a",
 			expected: version_core.Core{
-				Major: "3",
+				Major: 3,
 			},
 		},
 		{
 			version: "0.12.0",
 			expected: version_core.Core{
-				Major: "0",
+				Major: 0,
 			},
 		},
 	}
@@ -43,8 +43,8 @@ func TestSplit(t *testing.T) {
 		}
 
 		numbers := []struct {
-			Number1 string
-			Number2 string
+			Number1 int
+			Number2 int
 		}{
 			{
 				Number1: value.expected.Major,
@@ -54,7 +54,7 @@ func TestSplit(t *testing.T) {
 
 		for _, value := range numbers {
 			if !reflect.DeepEqual(value.Number1, value.Number2) {
-				t.Fatalf("expected: %s, got %s", value.Number1, value.Number2)
+				t.Fatalf("expected: %d, got %d", value.Number1, value.Number2)
 			}
 		}
 
