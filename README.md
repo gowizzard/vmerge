@@ -28,7 +28,7 @@ env:
   USER_NAME: "GitHub Action"
   USER_EMAIL: "actions@github.com"
   DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
-  COMMIT_MESSAGE: "ci: The data of the master branch was merged automatically."
+  COMMIT_MESSAGE: "ci: The data of the default branch was merged automatically."
 
 jobs:
   version:
