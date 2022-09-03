@@ -28,7 +28,7 @@ env:
   USER_NAME: "GitHub Action"
   USER_EMAIL: "actions@github.com"
   DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
-  COMMIT_MESSAGE: "ci: The data of the master branch was merged automatically."
+  COMMIT_MESSAGE: "ci: The data of the default branch was merged automatically."
 
 jobs:
   version:
@@ -46,7 +46,7 @@ jobs:
 
       - name: Get the major version
         id: vmerge
-        uses: gowizzard/vmerge@v1.0.0
+        uses: gowizzard/vmerge@v1
         env:
             VERSION: ${{ steps.information.outputs.tag }}
             SUFFIX: "v"
