@@ -15,24 +15,24 @@ func TestInteger(t *testing.T) {
 		expected int
 	}{
 		{
-			number:   "5",
-			expected: 5,
-		},
-		{
-			number:   "265",
-			expected: 265,
-		},
-		{
-			number:   "78",
-			expected: 78,
-		},
-		{
-			number:   "132",
-			expected: 132,
+			number:   "56",
+			expected: 56,
 		},
 		{
 			number:   "25",
 			expected: 25,
+		},
+		{
+			number:   "43",
+			expected: 43,
+		},
+		{
+			number:   "165",
+			expected: 165,
+		},
+		{
+			number:   "465",
+			expected: 465,
 		},
 	}
 
