@@ -33,6 +33,18 @@ func TestSplit(t *testing.T) {
 				Major: 0,
 			},
 		},
+		{
+			version: "1.23.5-beta.1",
+			expected: version_core.Core{
+				Major: 1,
+			},
+		},
+		{
+			version: "v14.0.9",
+			expected: version_core.Core{
+				Major: 14,
+			},
+		},
 	}
 
 	for _, value := range tests {
